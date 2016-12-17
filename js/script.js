@@ -4,22 +4,28 @@ $(document).ready(function(){
 	gridinit(res);
 	startbasic();
 	$("#coloursbtn").click(function() {
-		var res = prompt("How many boxes high / wide do you want this thing?", "e.g. 16");
-		$("#sketchpad").empty();
-		gridinit(res);
-		startcolour();
+		var res = parseInt(prompt("How many boxes high / wide do you want this thing?", "e.g. 16"));
+		if (res > 0) {
+			$("#sketchpad").empty();
+			gridinit(res);
+			startcolour();
+		}
 	});
 	$("#basicbtn").click(function() {
-		var res = prompt("How many boxes high / wide do you want this thing?", "e.g. 16");
-		$("#sketchpad").empty();
-		gridinit(res);
-		startbasic();
+		var res = parseInt(prompt("How many boxes high / wide do you want this thing?", "e.g. 16"));
+		if (res > 0) {
+			$("#sketchpad").empty();
+			gridinit(res);
+			startbasic();
+		}
 	});
 	$("#fadebtn").click(function() {
-		var res = prompt("How many boxes high / wide do you want this thing?", "e.g. 16");
-		$("#sketchpad").empty();
-		gridinit(res);
-		startfade();
+		var res = parseInt(prompt("How many boxes high / wide do you want this thing?", "e.g. 16"));
+		if (res > 0) {
+			$("#sketchpad").empty();
+			gridinit(res);
+			startfade();
+		}
 	});
 });
 
