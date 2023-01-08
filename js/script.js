@@ -10,24 +10,24 @@ gridinit(res);
 startbasic(); // On page load start the basic grid with size 16
 
 coloursbtn.addEventListener("click", function() { // Start the random colours grid
-	res = parseInt(prompt("How many boxes high / wide do you want the grid?", "e.g. 16"));
-	if (res > 0) { // Ensures input is a valid integer before clearing and resetting
+	res = parseInt(prompt("How many boxes high / wide do you want the grid? (Max 100)", "e.g. 16"));
+	if (res > 0 && res <= 100) { // Ensures input is a valid integer before clearing and resetting
 		sketchpad.replaceChildren();
 		gridinit(res);
 		startcolour();
 	}
 });
 basicbtn.addEventListener("click", function() { // Start basic white-black grid
-	res = parseInt(prompt("How many boxes high / wide do you want the grid?", "e.g. 16"));
-	if (res > 0) {
+	res = parseInt(prompt("How many boxes high / wide do you want the grid? (Max 100)", "e.g. 16"));
+	if (res > 0 && res <= 100) {
 		sketchpad.replaceChildren();
 		gridinit(res);
 		startbasic();
 	}
 });
 fadebtn.addEventListener("click", function() { // Start fading white-black grid
-	res = parseInt(prompt("How many boxes high / wide do you want the grid?", "e.g. 16"));
-	if (res > 0) {
+	res = parseInt(prompt("How many boxes high / wide do you want the grid? (Max 100)", "e.g. 16"));
+	if (res > 0 && res <= 100) {
 		sketchpad.replaceChildren();
 		gridinit(res);
 		startfade();
